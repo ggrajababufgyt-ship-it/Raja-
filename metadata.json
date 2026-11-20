@@ -1,0 +1,6 @@
+{
+  "name": "SpeakUp AI – English Speaking Challenge",
+  "description": "Speak English. Think Better. Become Fluent. AI-powered English speaking coach with 10 progressive levels, voice recognition, Hindi explanations, and real-time conversation.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

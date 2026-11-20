@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["src/lib/levels.ts"]
+
+# Route /api/* requests to Netlify Functions securely
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/ai-speakup/:splat"
+  status = 200
+
+# SPA fallback so refreshing any client route never produces a 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
